@@ -13,13 +13,17 @@ public class BirdScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            rb.AddForce((Vector2.up + Vector2.right) * 300f);
+            rb.AddForce(Vector2.up * 300f);
         }
         if(Input.GetKeyDown(KeyCode.RightArrow))
         {
             rb.AddForce(Vector2.right * 300f);
+        }
+        if(Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            rb.AddForce(Vector2.down * 300f);
         }
         if(Input.GetKeyDown(KeyCode.LeftArrow))
         {
