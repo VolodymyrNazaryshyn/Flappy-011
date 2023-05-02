@@ -1,24 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject TubePrefab;
+    [SerializeField] private GameObject TubePrefab;
 
     private float spawnTime;
     private float leftTime;
 
-    void Start()
+    private void Start()
     {
-        spawnTime = 6f; // 6 sec
+        spawnTime = 3f; // 3 sec
         leftTime = 0f;
     }
 
-    void Update()
+    private void Update()
     {
         leftTime -= Time.deltaTime;
+
         if (leftTime <= 0f)
         {
             // spawn
